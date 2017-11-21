@@ -12,10 +12,19 @@ public class RemovingStuffFromArrayLists {
 	public static void main(String[] args) {
 
 		class Stuff {
+			boolean isDirt() {
+				return false;
+			}
 		}
 		class Worm extends Stuff {
+			boolean isDirt() {
+				return false;
+			}
 		}
 		class Dirt extends Stuff {
+			boolean isDirt() {
+				return true;
+			}
 		}
 		ArrayList<Stuff> stuffIFoundInTheYard = new ArrayList<Stuff>();
 		stuffIFoundInTheYard.add(new Worm());
@@ -28,6 +37,13 @@ public class RemovingStuffFromArrayLists {
 		System.out.println(stuffIFoundInTheYard.size());
 
 		/* TODO 1: Clean out the dirt but keep the delicious worms. */
+		for (int i = 0; i < stuffIFoundInTheYard.size(); i++) {
+			if (stuffIFoundInTheYard.get(i).isDirt()) {
+			//remove dirt from arraylist	
+			}
+		}
+		
+		
 
 		System.out.println(stuffIFoundInTheYard.size()); // should be 2
 
