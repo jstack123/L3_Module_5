@@ -4,7 +4,7 @@ public class Snake {
 	int viciousness;
 	boolean venomous;
 
-	public Snake() {
+	public Snake(int viciousness, boolean venomous) {
 		this.viciousness = viciousness;
 		this.venomous = venomous;
 	}
