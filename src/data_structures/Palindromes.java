@@ -2,16 +2,28 @@ package data_structures;
 
 public class Palindromes {
 	public boolean isPalindrome(String word) {
+		String mergedWord = "";
+		String noSC = "";
+		String reverse = "";
 		
 		for (int i = 0; i < word.length(); i++) {
-			char last = word.charAt(word.length()-1-i); 
-			char first = word.charAt(i);
-			char last2 = Character.toLowerCase(last);
-			char first2 = Character.toLowerCase(first);
-			if (last2 != first2 ) {
+			noSC = noSC.toLowerCase();
+			 if (word.charAt(i) != ',' && word.charAt(i) != ' ' && word.charAt(i) !=  '!' ) {
+				noSC+=word.charAt(i);
+			}
+
+		}
+		
+		for (int i = noSC.length()-1; i >= 0; i--) {
+			reverse += noSC.charAt(i);
+			 char firstLetters= Character.toLowerCase(noSC.charAt(i));
+			 char secondLetters= Character.toLowerCase(noSC.charAt(noSC.length()-1-i));
+			
+			if (firstLetters != secondLetters ) {
 				return false;
 			} 
 		}
+		System.out.println(noSC);
 		return true;
 	}
 	
