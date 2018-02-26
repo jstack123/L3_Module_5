@@ -34,11 +34,26 @@ for(int i = 0; i < arrayOfInts.length; i++) {
  
  //9. go through the array and swap any two values that are out of order
  //   Do a search for bubble sort for better clarification
- for(int i = 0; i < arrayOfInts.length; i++) { 
+ int temp = 0;
+ for(int i = 0; i < arrayOfInts.length-1; i++) { 
+     if(arrayOfInts[i+1] < arrayOfInts[i]) {
+        temp = arrayOfInts[i+1];
+        arrayOfInts[i+1] = arrayOfInts[i];
+        arrayOfInts[i] = temp;
+     }
    
  }  
+ 
  //10. reset the values of the array to a new random value
  //      whenever the mouse is clicked
- 
+
  //11. try using different sorting algorithms the see which ones are the fastest.
+
 }
+
+void mouseClicked(){
+   System.out.println("worked");
+    for(int i = 0; i < width; i++) {
+   arrayOfInts[i] = (int)random(height);
+ }  
+ } 
